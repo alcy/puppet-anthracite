@@ -27,7 +27,7 @@ Puppet::Reports.register_report(:anthracite) do
       str = changed.join(', ')
       req = Net::HTTP::Post.new(uri.request_uri)
       now = Time.now.to_i
-      req.set_form_data({ "event_timestamp" => "#{now}", "event_tags" => "puppet", "event_desc" => "#{str}" })
+      req.set_form_data({ "event_timestamp" => "#{now}", "event_tags" => "puppet", "event_desc" => "Changed resources: #{str}" })
 
       begin
         response = http.request(req)
