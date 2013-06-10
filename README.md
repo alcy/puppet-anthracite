@@ -1,7 +1,7 @@
 puppet-anthracite
 =================
 
-Send puppet changes summary to anthracite. Main purpose is to just record when system state changes, and specify which resources changed, as opposed to a full blown report processor or only reporting failed runs. In the below config the timeout options are same as net/http timeout opts. 
+Send puppet changes summary to anthracite. Main purpose is to just record when system state changes, and specify which resources changed, as opposed to a full blown report processor or only reporting failed runs. In the below config the timeout options are same as net/http timeout opts. To use, simply drop this repo  in your modulepath, and in puppet master conf, `reports = anthracite`.  
 
 
 Sample config (/etc/puppet/anthracite.yaml):  
